@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="sasi_solid_v12" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- <link name="dummy">
+  </link>
+  
+  <joint name="dummy_joint" type="fixed">
+    <parent link="dummy"/>
+    <child link="base_link"/>
+  </joint> -->
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.231091488414938 0.283170654508655 0.0907756925294726"
+        rpy="0 0 0" />
+      <mass
+        value="4.04974915471266" />
+      <inertia
+        ixx="0.0343167702681818"
+        ixy="-2.95693498374549E-08"
+        ixz="-3.77683449159235E-10"
+        iyy="0.0196592423407753"
+        iyz="-5.11903308272849E-05"
+        izz="0.0450230429432222" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sasi_solid_v12/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sasi_solid_v12/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rigth_front">
+    <inertial>
+      <origin
+        xyz="0.00036673709064694 0.0724396234696468 0.000114307396850921"
+        rpy="0 0 0" />
+      <mass
+        value="1.52825500377755" />
+      <inertia
+        ixx="0.00881094374513575"
+        ixy="-6.47853797090928E-18"
+        ixz="-2.68882138776405E-17"
+        iyy="0.0153748645829108"
+        iyz="2.69498937255981E-17"
+        izz="0.00881094374005171" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sasi_solid_v12/meshes/rigth_front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sasi_solid_v12/meshes/rigth_front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rigth_fronty"
+    type="continuous">
+    <origin
+      xyz="-0.70359 0.79776 -0.075106"
+      rpy="-3.1416 0.75556 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="rigth_front" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="rigth_back">
+    <inertial>
+      <origin
+        xyz="-0.000382814127539072 -0.0724396234696458 3.18687690905317E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.52825500377755" />
+      <inertia
+        ixx="0.00881094374513578"
+        ixy="5.08079478164671E-18"
+        ixz="-4.22838847269347E-17"
+        iyy="0.0153748645829109"
+        iyz="4.44833452653767E-17"
+        izz="0.00881094374005174" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sasi_solid_v12/meshes/rigth_back.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sasi_solid_v12/meshes/rigth_back.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rigth_backy"
+    type="continuous">
+    <origin
+      xyz="-0.70359 -0.18553 -0.085774"
+      rpy="3.1416 1.1197 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="rigth_back" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="left_front">
+    <inertial>
+      <origin
+        xyz="-4.55191440096314E-15 0.0724396234696457 -1.4432899320127E-15"
+        rpy="0 0 0" />
+      <mass
+        value="1.52825500377756" />
+      <inertia
+        ixx="0.00881094374053719"
+        ixy="-1.01929157001527E-17"
+        ixz="1.4941260034762E-12"
+        iyy="0.0153748645829109"
+        iyz="6.05059594308728E-18"
+        izz="0.0088109437446503" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sasi_solid_v12/meshes/left_front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96078431372549 0.96078431372549 0.964705882352941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sasi_solid_v12/meshes/left_front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_fronty"
+    type="continuous">
+    <origin
+      xyz="0.24141 0.798 -0.074681"
+      rpy="3.1416 1.251 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_front" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="left_back">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 0.0724396234696456 5.16253706450698E-15"
+        rpy="0 0 0" />
+      <mass
+        value="1.52825500377756" />
+      <inertia
+        ixx="0.00881094374491599"
+        ixy="-3.35765263869818E-18"
+        ixz="1.03396902585012E-12"
+        iyy="0.0153748645829109"
+        iyz="9.25316516289008E-17"
+        izz="0.00881094374027152" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sasi_solid_v12/meshes/left_back.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96078431372549 0.96078431372549 0.964705882352941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sasi_solid_v12/meshes/left_back.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_backy"
+    type="continuous">
+    <origin
+      xyz="0.24141 -0.18528 -0.086194"
+      rpy="3.1416 0.13286 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_back" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+
+<transmission name="left_front_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_frontx">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="left_front_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="left_back_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_backx">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="left_back_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rigth_back_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rigth_backx">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rigth_back_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rigth_front_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rigth_frontx">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rigth_front_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<!--ADD SKID STEERING-->
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>left_fronty</leftFrontJoint>
+    <rightFrontJoint>rigth_fronty</rightFrontJoint>
+    <leftRearJoint>left_backy</leftRearJoint>
+    <rightRearJoint>rigth_backy</rightRearJoint>
+    <wheelSeparation>1.02</wheelSeparation>
+    <wheelDiameter>0.25</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>15</torque>
+    <topicName>cmd_vel</topicName>
+    <odometryTopic>odom</odometryTopic>
+    <odometryFrame>odom</odometryFrame>
+    <odometrySource>1</odometrySource>
+    <broadcastTF>true</broadcastTF>
+  </plugin>
+</gazebo>
+<!-- 
+#ADD VELODYNE 3D LIDAR#
+<joint name="velodyne_base_mount_joint" type="fixed">
+    <origin rpy="0 0 1.55" xyz="-0.23 0.65 0.15"/>
+    <parent link="base_link"/>
+    <child link="velodyne_base_link"/>
+  </joint>
+  <link name="velodyne_base_link">
+    <inertial>
+      <mass value="0.83"/>
+      <origin xyz="0 0 0.03585"/>
+      <inertia ixx="0.000908059425" ixy="0" ixz="0" iyy="0.000908059425" iyz="0" izz="0.0011049624"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://velodyne_description/meshes/VLP16_base_1.dae"/>
+      </geometry>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://velodyne_description/meshes/VLP16_base_2.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.03585"/>
+      <geometry>
+        <cylinder length="0.0717" radius="0.0516"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="velodyne_base_scan_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.0377"/>
+    <parent link="velodyne_base_link"/>
+    <child link="velodyne"/>
+  </joint>
+  <link name="velodyne">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="1e-7" ixy="0" ixz="0" iyy="1e-7" iyz="0" izz="1e-7"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.0377"/>
+      <geometry>
+        <mesh filename="package://velodyne_description/meshes/VLP16_scan.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <gazebo reference="velodyne">
+    <sensor name="velodyne-VLP16" type="ray">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>440</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.54</min_angle>
+            <max_angle>1.54</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>16</samples>
+            <resolution>1</resolution>
+            <min_angle>-0.13</min_angle>
+            <max_angle> 0.13</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.3</min>
+          <max>131.0</max>
+          <resolution>0.001</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.0</stddev>
+        </noise>
+      </ray>
+      <plugin filename="libgazebo_ros_velodyne_laser.so" name="gazebo_ros_laser_controller">
+        <topicName>/velodyne_points</topicName>
+        <frameName>velodyne</frameName>
+        <organize_cloud>false</organize_cloud>
+        <min_range>0.9</min_range>
+        <max_range>130.0</max_range>
+        <gaussianNoise>0.008</gaussianNoise>
+      </plugin>
+    </sensor>
+  </gazebo>
+ -->
+<!-- 2D lidar --> 
+<gazebo reference="hokuyo_link">
+  <sensor type="ray" name="head_hokuyo_sensor">
+    <pose>0 0 0 0 0 0</pose>
+    <visualize>true</visualize>
+    <update_rate>40</update_rate>
+    <ray>
+      <scan>
+        <horizontal>
+         <samples>720</samples>
+         <resolution>1</resolution>
+         <min_angle>-1.570796</min_angle>
+         <max_angle>1.570796</max_angle>
+        </horizontal>
+      </scan>
+      <range>
+        <min>0.10</min>
+        <max>5.0</max>
+        <resolution>0.01</resolution>
+      </range>
+     <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.01</stddev>
+     </noise>
+    </ray>
+    <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+      <topicName>/laser/scan</topicName>
+      <frameName>hokuyo_link</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<!--ADD HOKUYO LIDAR JOINT-->
+<joint name="hokuyo_joint" type="fixed">
+  <axis xyz="0 1 0" />
+  <origin xyz="-0.22 0.6 0.15" rpy="0 0 1.54"/>
+  <parent link="base_link"/>
+  <child link="hokuyo_link"/>
+</joint>
+
+<!-- HOKUYO LIDAR LINK -->
+<link name="hokuyo_link">
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+  <box size="0.1 0.1 0.1"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sasi_solid_v12/meshes/hokuyo.dae"/>
+    </geometry>
+  </visual>
+
+  <inertial>
+    <mass value="1e-5" />
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+  </inertial>
+</link>
+
+<!--ADD CAMERA-->
+<gazebo reference="camera_link">
+  <sensor type="camera" name="camera1">
+    <update_rate>30.0</update_rate>
+    <camera name="head">
+      <horizontal_fov>1.3962634</horizontal_fov>
+      <image>
+        <width>1280</width>
+        <height>720</height>
+        <format>R8G8B8</format>
+      </image>
+      <clip>
+        <near>0.02</near>
+        <far>300</far>
+      </clip>
+      <noise>
+        <type>gaussian</type>
+        <!-- Noise is sampled independently per pixel on each frame.
+              That pixel's noise value is added to each of its color
+              channels, which at that point lie in the range [0,1]. -->
+        <mean>0.0</mean>
+        <stddev>0.007</stddev>
+      </noise>
+    </camera>
+    <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>0.0</updateRate>
+      <cameraName>gazebo/camera1</cameraName>
+      <imageTopicName>image_raw</imageTopicName>
+      <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+      <frameName>camera_link</frameName>
+      <hackBaseline>0.07</hackBaseline>
+      <distortionK1>0.0</distortionK1>
+      <distortionK2>0.0</distortionK2>
+      <distortionK3>0.0</distortionK3>
+      <distortionT1>0.0</distortionT1>
+      <distortionT2>0.0</distortionT2>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<!--ADD CAMERA JOINT-->  
+<joint name="camera_joint" type="fixed">
+  <axis xyz="0 1 0" />
+  <origin xyz="-0.22 0.6 0.25" rpy="0 0 1.54"/>
+  <parent link="base_link"/>
+  <child link="camera_link"/>
+</joint>
+
+<!--ADD CAMERA LINK-->  
+<link name="camera_link">
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+  <box size="0.175 0.03 0.033"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 1.6"/>
+    <geometry>
+  <box size="0.175 0.03 0.033"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+
+  <inertial>
+    <mass value="1e-5" />
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+  </inertial>
+</link>
+</robot>

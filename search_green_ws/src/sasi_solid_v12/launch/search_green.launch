@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+
+  <include
+    file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="false"/>
+  </include>
+  <!-- şasi node -->
+  <param name="robot_description"
+   command="$(find xacro)/xacro '$(find sasi_solid_v12)/urdf/sasi_solid_v12.urdf'"/>
+  <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find sasi_solid_v12)/urdf/sasi_solid_v12.urdf -urdf -z 0.3 -urdf -model sasi_solid_v12"
+    output="screen" />
+
+<!--******************************************************************************-->
+
+<!-- probe node -->
+  <param name="probe_description"
+  command="$(find xacro)/xacro '$(find sasi_solid_v12)/urdf/probe.urdf'"/>
+  <node
+    name="spawn_model_probe"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find sasi_solid_v12)/urdf/probe.urdf -urdf -model probe"
+    output="screen" /> 
+
+    <node name="hareket" pkg="sasi_solid_v12" type="search.py"
+    output="screen">
+   </node>
+
+   <node name="center_publisher" pkg="sasi_solid_v12" type="green_objects_center.py"
+    output="screen">
+   </node>
+
+    </launch>
